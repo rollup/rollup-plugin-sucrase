@@ -1,0 +1,31 @@
+{
+  "name": "rollup-plugin-sucrase",
+  "version": "1.0.0",
+  "dependencies": {
+    "rollup-pluginutils": "^2.3.0",
+    "sucrase": "^2.2.0"
+  },
+  "description": "Compile TypeScript, Flow, JSX etc with Sucrase",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rollup/rollup-plugin-sucrase.git"
+  },
+  "keywords": [
+    "sucrase",
+    "typescript",
+    "flow",
+    "jsx",
+    "rollup"
+  ],
+  "author": "Rich Harris",
+  "license": "LIL",
+  "bugs": {
+    "url": "https://github.com/rollup/rollup-plugin-sucrase/issues"
+  },
+  "homepage": "https://github.com/rollup/rollup-plugin-sucrase#readme"
+}
