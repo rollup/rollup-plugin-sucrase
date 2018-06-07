@@ -9,8 +9,15 @@ module.exports = function sucrase(opts = {}) {
 
 		transform(code, id) {
 			return transform(code, {
-				transforms: opts.transforms
+				transforms: opts.transforms,
+				jsxPragma: opts.jsxPragma,
+				jsxFragmentPragma: opts.jsxFragmentPragma,
+				enableLegacyTypeScriptModuleInterop:
+					opts.enableLegacyTypeScriptModuleInterop,
+				enableLegacyBabel5ModuleInterop:
+					opts.enableLegacyTypeScriptModuleInterop,
+				filePath: opts.filePath,
 			});
-		}
+		},
 	};
 };
