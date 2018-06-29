@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "rollup-pluginutils": "^2.3.0",
-    "sucrase": "^2.2.0"
+    "sucrase": "^3.3.0"
   },
   "description": "Compile TypeScript, Flow, JSX etc with Sucrase",
   "main": "index.js",
