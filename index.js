@@ -8,7 +8,7 @@ module.exports = function sucrase(opts = {}) {
 		name: 'sucrase',
 
 		transform(code, id) {
-			return transform(code, {
+			const result = transform(code, {
 				transforms: opts.transforms,
 				jsxPragma: opts.jsxPragma,
 				jsxFragmentPragma: opts.jsxFragmentPragma,
@@ -16,8 +16,16 @@ module.exports = function sucrase(opts = {}) {
 					opts.enableLegacyTypeScriptModuleInterop,
 				enableLegacyBabel5ModuleInterop:
 					opts.enableLegacyTypeScriptModuleInterop,
-				filePath: opts.filePath,
+				production: opts.production,
+				filePath: id,
+				sourceMapOptions: {
+					compiledFilename: id,
+				}
 			});
+			return {
+				code: result.code,
+				map: result.sourceMap,
+			}
 		},
 	};
 };
