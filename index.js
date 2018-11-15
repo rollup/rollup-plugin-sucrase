@@ -8,6 +8,8 @@ module.exports = function sucrase(opts = {}) {
 		name: 'sucrase',
 
 		transform(code, id) {
+			if (!filter(id)) return null;
+
 			const result = transform(code, {
 				transforms: opts.transforms,
 				jsxPragma: opts.jsxPragma,
