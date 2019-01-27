@@ -1,9 +1,9 @@
 {
   "name": "rollup-plugin-sucrase",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "dependencies": {
     "rollup-pluginutils": "^2.3.0",
-    "sucrase": "^3.3.0"
+    "sucrase": "3.x"
   },
   "description": "Compile TypeScript, Flow, JSX etc with Sucrase",
   "main": "index.js",

@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const { transform } = require('sucrase');
 const { createFilter } = require('rollup-pluginutils');
 
@@ -6,6 +8,19 @@ module.exports = function sucrase(opts = {}) {
 
 	return {
 		name: 'sucrase',
+
+		resolveId(importee, importer) {
+			if (importer && importee[0] === '.') {
+				const resolved = path.resolve(
+					(importer ? path.dirname(importer) : process.cwd()),
+					importee
+				);
+
+				if (!fs.existsSync(resolved) && fs.existsSync(resolved + '.ts')) {
+					return resolved + '.ts';
+				}
+			}
+		},
 
 		transform(code, id) {
 			if (!filter(id)) return null;
