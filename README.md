@@ -2,6 +2,9 @@
 
 Use [Sucrase](https://github.com/alangpierce/sucrase) with Rollup.
 
+## Archived (Migration to Mono-Repo In-Process)
+
+This repository has been archived and is in the process of being migrated to a new monorepo. Please bear with us as we make this transition. More information to follow.
 
 ## Installation
 
